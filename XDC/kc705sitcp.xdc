@@ -126,3 +126,7 @@ set_max_delay -datapath_only -from [get_clocks SYSCLK_200MP_IN] -to [get_port GM
 set_max_delay -datapath_only -from [get_clocks SYSCLK_200MP_IN] -to [get_port I2C_SCL] 10
 set_max_delay -datapath_only -from [get_clocks SYSCLK_200MP_IN] -to [get_port I2C_SDA] 10
 
+##GPIO                                                                                                        
+set_property -dict {PACKAGE_PIN W29  IOSTANDARD LVCMOS25}[get_ports sw[0]]       
+set_property -dict {PACKAGE_PIN AA28 IOSTANDARD LVCMOS25}[get_ports sw[1]]       
+set_property -dict {PACKAGE_PIN Y28  IOSTANDARD LVCMOS25}[get_ports sw[2]]
