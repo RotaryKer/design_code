@@ -130,3 +130,10 @@ set_max_delay -datapath_only -from [get_clocks SYSCLK_200MP_IN] -to [get_port I2
 set_property -dict {PACKAGE_PIN W29  IOSTANDARD LVCMOS25}[get_ports sw[0]]       
 set_property -dict {PACKAGE_PIN AA28 IOSTANDARD LVCMOS25}[get_ports sw[1]]       
 set_property -dict {PACKAGE_PIN Y28  IOSTANDARD LVCMOS25}[get_ports sw[2]]
+
+set_property -dict {PACKAGE_PIN G12   IOSTANDARD LVCMOS25}[get_ports bt[0]]       
+set_property -dict {PACKAGE_PIN AG5   IOSTANDARD LVCMOS15}[get_ports bt[1]]       
+set_property -dict {PACKAGE_PIN AA12  IOSTANDARD LVCMOS15}[get_ports bt[2]]       
+set_property -dict {PACKAGE_PIN AB12  IOSTANDARD LVCMOS15}[get_ports bt[3]]       
+set_property -dict {PACKAGE_PIN AC6   IOSTANDARD LVCMOS15}[get_ports bt[4]]       
+
