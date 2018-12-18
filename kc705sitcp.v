@@ -275,13 +275,8 @@ module
 	fifo_generator_v11_0 fifo_generator_v11_0(
 	  .clk			    (CLK_200M		),//in	:
 	  .rst			    (~TCP_OPEN_ACK		),//in	:
-<<<<<<< HEAD
 	  //.din			    (TCP_RX_DATA[7:0]	),//in	:
       .din			    (data_out[7:0]	),//in	:
-=======
-	 // .din			    (TCP_RX_DATA[7:0]	),//in	:
-	  .din			    (data_out[7:0]	),//in	:
->>>>>>> f9bd15924bb89ee4c7bbe3eed7a842164baf7870
 	  .wr_en		    (TCP_RX_WR		),//in	:
 	  .full			    (			),//out	:
 	  .dout			    (TCP_TX_DATA[7:0]	),//out	:
