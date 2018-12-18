@@ -45,7 +45,7 @@ module
 		//connect EEPROM
 		inout	wire		I2C_SDA		,
 		output	wire		I2C_SCL     ,
-        input   wire    [3:0]   sw      ,
+        input   wire    [3:0]   sw      
 	);
     
 
@@ -269,7 +269,7 @@ module
       .rst          (~TCP_OPEN_ACK),
       .sw           (sw[3:0]      ),
       .data         (data_out[7:0])
-    )
+    );
 
 //FIFO
 	fifo_generator_v11_0 fifo_generator_v11_0(
