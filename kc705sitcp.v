@@ -45,7 +45,8 @@ module
 		//connect EEPROM
 		inout	wire		I2C_SDA		,
 		output	wire		I2C_SCL     ,
-        input   wire    [4:0]   bt      
+        input   wire    [4:0]   bt      ,
+        output  wire    [7:0]   led         
 	);
     
 
@@ -262,7 +263,13 @@ module
 		.RBCP_ACK	(RBCP_ACK),					// in	: Access acknowledge
 		.RBCP_RD	(RBCP_RD[7:0])				// in	: Read data[7:0]
 	);
-
+//LED
+    Led led0(
+        .clk          (CLM_200M     ),
+        .rst          (~TCP_OPEN_ACK),
+        .led           (led[7:0]      ),
+        .data_in         (data_out[7:0])
+    )
 //Transport
     Transport Transport0(
       .clk          (CLM_200M     ),
@@ -275,15 +282,8 @@ module
 	fifo_generator_v11_0 fifo_generator_v11_0(
 	  .clk			    (CLK_200M		),//in	:
 	  .rst			    (~TCP_OPEN_ACK		),//in	:
-<<<<<<< HEAD
 	  //.din			    (TCP_RX_DATA[7:0]	),//in	:
       .din			    (data_out[7:0]	),//in	:
-=======
-	 // .din			    (TCP_RX_DATA[7:0]	),//in	:
-	  .din			    (data_out[7:0]	),//in	:
->>>>>>> f9bd15924bb89ee4c7bbe3eed7a842164baf7870
-	  .wr_en		    (TCP_RX_WR		),//in	:
-	  .full			    (			),//out	:
 	  .dout			    (TCP_TX_DATA[7:0]	),//out	:
 	  .valid		    (FIFO_RD_VALID		),//out	:active hi
 	  .rd_en		    (~TCP_TX_FULL		),//in	:
