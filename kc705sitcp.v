@@ -45,7 +45,7 @@ module
 		//connect EEPROM
 		inout	wire		I2C_SDA		,
 		output	wire		I2C_SCL     ,
-        input   wire    [3:0]   sw      
+        input   wire    [4:0]   bt      
 	);
     
 
@@ -267,7 +267,7 @@ module
     Transport Transport0(
       .clk          (CLM_200M     ),
       .rst          (~TCP_OPEN_ACK),
-      .sw           (sw[3:0]      ),
+      .bt           (bt[4:0]      ),
       .data         (data_out[7:0])
     );
 
@@ -275,7 +275,8 @@ module
 	fifo_generator_v11_0 fifo_generator_v11_0(
 	  .clk			    (CLK_200M		),//in	:
 	  .rst			    (~TCP_OPEN_ACK		),//in	:
-	  .din			    (TCP_RX_DATA[7:0]	),//in	:
+	  //.din			    (TCP_RX_DATA[7:0]	),//in	:
+      .din			    (data_out[7:0]	),//in	:
 	  .wr_en		    (TCP_RX_WR		),//in	:
 	  .full			    (			),//out	:
 	  .dout			    (TCP_TX_DATA[7:0]	),//out	:
