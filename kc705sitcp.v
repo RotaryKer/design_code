@@ -44,9 +44,10 @@ module
 		input	wire		GPIO_SWITCH_0	,
 		//connect EEPROM
 		inout	wire		I2C_SDA		,
-		output	wire		I2C_SCL
+		output	wire		I2C_SCL     ,
+        input   wire    [3:0]   sw      ,
 	);
-
+    
 
 //------------------------------------------------------------------------------
 //	Buffers
@@ -83,7 +84,7 @@ module
 	reg			CNT_RST		;
 	reg			CNT_LD		;
 	reg		[6:0]	RX_CNT		;
-
+    wire    [7:0]   data_out    ;
 	IBUFDS #(.IOSTANDARD ("LVDS"))		LVDS_BUF(.O(CLK_200M), .I(SYSCLK_200MP_IN), .IB(SYSCLK_200MN_IN));
 
 
@@ -262,18 +263,25 @@ module
 		.RBCP_RD	(RBCP_RD[7:0])				// in	: Read data[7:0]
 	);
 
+//Transport
+    Transport Transport0(
+      .clk          (CLM_200M     ),
+      .rst          (~TCP_OPEN_ACK),
+      .sw           (sw[3:0]      ),
+      .data         (data_out[7:0])
+    )
 
 //FIFO
 	fifo_generator_v11_0 fifo_generator_v11_0(
-	  .clk			(CLK_200M		),//in	:
-	  .rst			(~TCP_OPEN_ACK		),//in	:
-	  .din			(TCP_RX_DATA[7:0]	),//in	:
-	  .wr_en		(TCP_RX_WR		),//in	:
-	  .full			(			),//out	:
-	  .dout			(TCP_TX_DATA[7:0]	),//out	:
-	  .valid		(FIFO_RD_VALID		),//out	:active hi
-	  .rd_en		(~TCP_TX_FULL		),//in	:
-	  .empty		(			),//out	:
+	  .clk			    (CLK_200M		),//in	:
+	  .rst			    (~TCP_OPEN_ACK		),//in	:
+	  .din			    (TCP_RX_DATA[7:0]	),//in	:
+	  .wr_en		    (TCP_RX_WR		),//in	:
+	  .full			    (			),//out	:
+	  .dout			    (TCP_TX_DATA[7:0]	),//out	:
+	  .valid		    (FIFO_RD_VALID		),//out	:active hi
+	  .rd_en		    (~TCP_TX_FULL		),//in	:
+	  .empty		    (			),//out	:
 	  .data_count		(FIFO_DATA_COUNT[11:0]	)//out	:[11:0]
 	);
 
