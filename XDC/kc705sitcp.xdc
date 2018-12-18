@@ -137,3 +137,13 @@ set_property -dict {PACKAGE_PIN AA12  IOSTANDARD LVCMOS15}[get_ports bt[2]]
 set_property -dict {PACKAGE_PIN AB12  IOSTANDARD LVCMOS15}[get_ports bt[3]]       
 set_property -dict {PACKAGE_PIN AC6   IOSTANDARD LVCMOS15}[get_ports bt[4]]       
 
+
+set_property -dict {PACKAGE_PIN AB8 IOSTANDARD LVCMOS18}  [get_ports led[0]]
+set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS18}  [get_ports led[1]]
+set_property -dict {PACKAGE_PIN AC9 IOSTANDARD LVCMOS18}  [get_ports led[2]]
+set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS18}  [get_ports led[3]]
+set_property -dict {PACKAGE_PIN AE26 IOSTANDARD LVCMOS25} [get_ports led[4]]
+set_property -dict {PACKAGE_PIN G19 IOSTANDARD LVCMOS25}  [get_ports led[5]]
+set_property -dict {PACKAGE_PIN E18 IOSTANDARD LVCMOS25}  [get_ports led[6]]
+set_property -dict {PACKAGE_PIN F16 IOSTANDARD LVCMOS25}  [get_ports led[7]]
+
