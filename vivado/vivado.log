@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 19 17:17:42 2018
+# Process ID: 3983
+# Current directory: /home/users/kakizaki/graduate_report/design_code/vivado
+# Command line: vivado
+# Log file: /home/users/kakizaki/graduate_report/design_code/vivado/vivado.log
+# Journal file: /home/users/kakizaki/graduate_report/design_code/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/users/kakizaki/graduate_report/design_code/vivado/project_1 -part xc7k325tffg900-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/cad/xilinx-vivado-2017.2/Vivado/2017.2/data/ip'.
+add_files {/home/users/kakizaki/graduate_report/design_code/src/TIMER.v /home/users/kakizaki/graduate_report/design_code/src/PCA9548_SW.v /home/users/kakizaki/graduate_report/design_code/src/IIC_CORE.v /home/users/kakizaki/graduate_report/design_code/src/IIC_CTL.v /home/users/kakizaki/graduate_report/design_code/src/Transport.v /home/users/kakizaki/graduate_report/design_code/src/WRAP_SiTCP_GMII_XC7K_32K.v /home/users/kakizaki/graduate_report/design_code/src/SiTCP_XC7K_32K_BBT_V110.v /home/users/kakizaki/graduate_report/design_code/src/fifo_generator_v11_0.v /home/users/kakizaki/graduate_report/design_code/src/AT93C46_IIC.v /home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v /home/users/kakizaki/graduate_report/design_code/src/BRAM128_9B9B.v /home/users/kakizaki/graduate_report/design_code/src/Led.v /home/users/kakizaki/graduate_report/design_code/ngc/SiTCP_XC7K_32K_BBT_V110.ngc /home/users/kakizaki/graduate_report/design_code/ngc/fifo_generator_v11_0.ngc}
+add_files -fileset constrs_1 -norecurse {/home/users/kakizaki/graduate_report/design_code/xdc/SiTCP.xdc /home/users/kakizaki/graduate_report/design_code/xdc/kc705sitcp.xdc}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
