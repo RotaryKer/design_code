@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Dec 20 11:21:33 2018
-# Process ID: 1466
+# Start of session at: Thu Dec 20 16:19:34 2018
+# Process ID: 24425
 # Current directory: /home/users/kakizaki/graduate_report/design_code/vivado/project_1
 # Command line: vivado project_1.xpr
 # Log file: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/vivado.log
@@ -12,10 +12,17 @@
 start_gui
 open_project project_1.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
+reset_run impl_1 -prev_step 
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
 open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
@@ -28,74 +35,9 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
 set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
 program_hw_devices [get_hw_devices xc7k325t_0]
 refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_compile_order -fileset sources_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
 reset_run synth_1
 launch_runs impl_1 -jobs 4
 wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
-set_property PROGRAM.FILE {/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/kc705sitcp.bit} [get_hw_devices xc7k325t_0]
-program_hw_devices [get_hw_devices xc7k325t_0]
-refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -jobs 4
-wait_on_run impl_1
-refresh_design
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]

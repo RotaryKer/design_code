@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1545282843">
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1545291812">
   <File Type="VDS-TIMING-PB" Name="kc705sitcp_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="kc705sitcp_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="kc705sitcp.dcp"/>
@@ -10,6 +10,12 @@
   <File Type="PA-TCL" Name="kc705sitcp.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../ngc/fifo_generator_v11_0.ngc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../ngc/SiTCP_XC7K_32K_BBT_V110.ngc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -86,23 +92,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../src/kc705sitcp.v">
+    <File Path="$PPRDIR/../../src/fifo_generator_v11_0.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../ngc/fifo_generator_v11_0.ngc">
+    <File Path="$PPRDIR/../../src/kc705sitcp.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../src/fifo_generator_v11_0.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

@@ -25,8 +25,10 @@ read_verilog -library xil_defaultlib {
   /home/users/kakizaki/graduate_report/design_code/src/TIMER.v
   /home/users/kakizaki/graduate_report/design_code/src/Transport.v
   /home/users/kakizaki/graduate_report/design_code/src/WRAP_SiTCP_GMII_XC7K_32K.v
+  /home/users/kakizaki/graduate_report/design_code/src/fifo_generator_v11_0.v
   /home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v
 }
+read_edif /home/users/kakizaki/graduate_report/design_code/ngc/fifo_generator_v11_0.ngc
 read_edif /home/users/kakizaki/graduate_report/design_code/ngc/SiTCP_XC7K_32K_BBT_V110.ngc
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

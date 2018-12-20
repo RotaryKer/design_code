@@ -277,23 +277,25 @@ module
       .bt           (bt[3:0]      ),
       .data         (data_out[7:0])
     );
-    assign TCP_TX_DATA[7:0]=data_out[7:0];
-/*
+   // assign TCP_TX_DATA[7:0]=data_out[7:0];
+
 //FIFO
 	fifo_generator_v11_0 fifo_generator_v11_0(
 	  .clk			(CLK_200M				),//in	:
 	  .rst			(~TCP_OPEN_ACK			),//in	:
 	  .din			(8'b00111111	),//in	:
 	  //.din			(TCP_RX_DATA[7:0]		),//in	:
-	  .wr_en		(TCP_RX_WR				),//in	:
+	 // .wr_en		(TCP_RX_WR				),//in	:
+	 .wr_en		(1'b1				),//in	:
 	  .full			(						),//out	:
 	  .dout			(TCP_TX_DATA[7:0]		),//out	:
 	  .valid		(FIFO_RD_VALID			),//out	:active hi
-	  .rd_en		(~TCP_TX_FULL			),//in	:
+	  //.rd_en		(~TCP_TX_FULL			),//in	:
+	  .rd_en		(1'b1		),//in	:
 	  .empty		(						),//out	:
 	  .data_count	(FIFO_DATA_COUNT[11:0]	)//out	:[11:0]
 	);
-*/
+
 //RBCP_test
 	always@(posedge CLK_200M)begin
 		if(RBCP_WE)begin
