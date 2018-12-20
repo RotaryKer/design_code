@@ -1,5 +1,5 @@
 module Led(
-    input wire          clk.
+    input wire          clk,
     input wire          rst,
     input wire  [7:0]   data_in,
     output reg  [7:0]   led

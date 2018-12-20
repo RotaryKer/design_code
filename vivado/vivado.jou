@@ -15,3 +15,16 @@ add_files {/home/users/kakizaki/graduate_report/design_code/src/TIMER.v /home/us
 add_files -fileset constrs_1 -norecurse {/home/users/kakizaki/graduate_report/design_code/xdc/SiTCP.xdc /home/users/kakizaki/graduate_report/design_code/xdc/kc705sitcp.xdc}
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1545282843">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="kc705sitcp.drc"/>
+  <File Type="BG-BGN" Name="kc705sitcp.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="kc705sitcp.sysdef"/>
+  <File Type="BITSTR-MMI" Name="kc705sitcp.mmi"/>
+  <File Type="BITSTR-BMM" Name="kc705sitcp_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="kc705sitcp.nky"/>
+  <File Type="BITSTR-RBT" Name="kc705sitcp.rbt"/>
+  <File Type="BITSTR-MSK" Name="kc705sitcp.msk"/>
+  <File Type="BG-BIN" Name="kc705sitcp.bin"/>
+  <File Type="BG-BIT" Name="kc705sitcp.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="kc705sitcp_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="kc705sitcp_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="kc705sitcp_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="kc705sitcp_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="kc705sitcp_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="kc705sitcp_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="kc705sitcp_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="kc705sitcp_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="kc705sitcp_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="kc705sitcp_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="kc705sitcp_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="kc705sitcp_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="kc705sitcp_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="kc705sitcp_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="kc705sitcp_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="kc705sitcp_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="kc705sitcp_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="kc705sitcp_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="kc705sitcp_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="kc705sitcp_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="kc705sitcp_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="kc705sitcp_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="kc705sitcp_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="kc705sitcp_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="kc705sitcp_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="kc705sitcp_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="kc705sitcp_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="kc705sitcp_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="RDI-RDI" Name="kc705sitcp.vdi"/>
+  <File Type="PLACE-TIMING" Name="kc705sitcp_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="kc705sitcp_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="kc705sitcp_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="kc705sitcp_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="kc705sitcp_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="kc705sitcp_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="kc705sitcp_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="kc705sitcp_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="kc705sitcp_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="kc705sitcp_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="kc705sitcp_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="kc705sitcp_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="kc705sitcp_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="kc705sitcp.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="kc705sitcp_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="kc705sitcp_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="kc705sitcp_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="kc705sitcp_timing_summary_init.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="kc705sitcp_postplace_pwropt.dcp"/>
+  <File Type="PA-TCL" Name="kc705sitcp.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../ngc/SiTCP_XC7K_32K_BBT_V110.ngc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/AT93C46_IIC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/BRAM128_9B9B.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/IIC_CORE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/IIC_CTL.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/Led.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/PCA9548_SW.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/SiTCP_XC7K_32K_BBT_V110.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/TIMER.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/Transport.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/WRAP_SiTCP_GMII_XC7K_32K.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/kc705sitcp.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../ngc/fifo_generator_v11_0.ngc">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../src/fifo_generator_v11_0.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="kc705sitcp"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../xdc/SiTCP.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../xdc/kc705sitcp.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

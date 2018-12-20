@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Dec 20 10:01:26 2018
+# Process ID: 19411
+# Current directory: /home/users/kakizaki/graduate_report/design_code/vivado/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/vivado.log
+# Journal file: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/cad/xilinx-vivado-2017.2/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 6100.633 ; gain = 101.102 ; free physical = 1136 ; free virtual = 6377
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:02:51 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:02:51 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:03:26 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:03:26 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 363 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'kc705sitcp' is not ideal for floorplanning, since the cellview 'SiTCP_XC7K_32K_BBT_V110' defined in file 'SiTCP_XC7K_32K_BBT_V110.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 81 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+  SRLC16E => SRL16E: 71 instances
+
+INFO: [Common 17-344] 'open_run' was cancelled
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:11:02 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:11:02 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:14:33 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:14:33 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:17:28 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:17:28 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:28:06 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:28:06 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Dec 20 10:41:52 2018] Launched synth_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/runme.log
+[Thu Dec 20 10:41:52 2018] Launched impl_1...
+Run output will be captured here: /home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 20 11:20:02 2018...

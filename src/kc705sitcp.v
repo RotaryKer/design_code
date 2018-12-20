@@ -45,7 +45,7 @@ module
 		//connect EEPROM
 		inout	wire		I2C_SDA		,
 		output	wire		I2C_SCL     ,
-        input   wire    [4:0]   bt      ,
+       input   wire    [3:0]   bt      ,
         output  wire    [7:0]   led         
 	);
     
@@ -265,33 +265,35 @@ module
 	);
 //LED
     Led led0(
-        .clk          (CLM_200M     ),
+        .clk          (CLK_200M     ),
         .rst          (~TCP_OPEN_ACK),
         .led           (led[7:0]      ),
         .data_in         (data_out[7:0])
-    )
+    );
 //Transport
     Transport Transport0(
-      .clk          (CLM_200M     ),
+      .clk          (CLK_200M     ),
       .rst          (~TCP_OPEN_ACK),
-      .bt           (bt[4:0]      ),
+      .bt           (bt[3:0]      ),
       .data         (data_out[7:0])
     );
-
+    assign TCP_TX_DATA[7:0]=data_out[7:0];
+/*
 //FIFO
 	fifo_generator_v11_0 fifo_generator_v11_0(
-	  .clk			    (CLK_200M		),//in	:
-	  .rst			    (~TCP_OPEN_ACK		),//in	:
-	  //.din			    (TCP_RX_DATA[7:0]	),//in	:
-      .din			    (data_out[7:0]	),//in	:
-	  .dout			    (TCP_TX_DATA[7:0]	),//out	:
-	  .valid		    (FIFO_RD_VALID		),//out	:active hi
-	  .rd_en		    (~TCP_TX_FULL		),//in	:
-	  .empty		    (			),//out	:
-	  .data_count		(FIFO_DATA_COUNT[11:0]	)//out	:[11:0]
+	  .clk			(CLK_200M				),//in	:
+	  .rst			(~TCP_OPEN_ACK			),//in	:
+	  .din			(8'b00111111	),//in	:
+	  //.din			(TCP_RX_DATA[7:0]		),//in	:
+	  .wr_en		(TCP_RX_WR				),//in	:
+	  .full			(						),//out	:
+	  .dout			(TCP_TX_DATA[7:0]		),//out	:
+	  .valid		(FIFO_RD_VALID			),//out	:active hi
+	  .rd_en		(~TCP_TX_FULL			),//in	:
+	  .empty		(						),//out	:
+	  .data_count	(FIFO_DATA_COUNT[11:0]	)//out	:[11:0]
 	);
-
-
+*/
 //RBCP_test
 	always@(posedge CLK_200M)begin
 		if(RBCP_WE)begin
