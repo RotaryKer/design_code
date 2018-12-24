@@ -1,5 +1,21 @@
 Release 14.7 - ngc2edif P_INT.20170511 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fifo_generator_v11_0.ngc ...
+WARNING:NetListWriters:298 - No output is written to fifo_generator_v11_0.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg<2 :
+   0> on block fifo_generator_v11_0 is not reconstructed, because there are some
+   missing bus signals.
+  finished :Prep
+Writing EDIF netlist file fifo_generator_v11_0.edif ...
+ngc2edif: Total memory usage is 103668 kilobytes
+
+Release 14.7 - ngc2edif P_INT.20170511 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Reading design SiTCP_XC7K_32K_BBT_V110.ngc ...
 WARNING:NetListWriters:298 - No output is written to
    SiTCP_XC7K_32K_BBT_V110.xncf, ignored.
@@ -72,5 +88,5 @@ WARNING:NetListWriters:306 - Signal bus SiTCP_INT/SiTCP_INT_REG/muxData[31 : 0]
    missing bus signals.
   finished :Prep
 Writing EDIF netlist file SiTCP_XC7K_32K_BBT_V110.edif ...
-ngc2edif: Total memory usage is 122588 kilobytes
+ngc2edif: Total memory usage is 122620 kilobytes
 

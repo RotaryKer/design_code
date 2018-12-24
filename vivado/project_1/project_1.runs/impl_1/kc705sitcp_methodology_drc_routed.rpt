@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Thu Dec 20 14:20:56 2018
+| Date         : Thu Dec 20 16:53:11 2018
 | Host         : hummingbird.cis.nagasaki-u.ac.jp running 64-bit CentOS release 6.9 (Final)
 | Command      : report_methodology -file kc705sitcp_methodology_drc_routed.rpt -rpx kc705sitcp_methodology_drc_routed.rpx
 | Design       : kc705sitcp
@@ -23,14 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 64
+             Violations found: 62
 +-----------+----------+------------------------------------------------------+------------+
 | Rule      | Severity | Description                                          | Violations |
 +-----------+----------+------------------------------------------------------+------------+
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain      | 2          |
 | TIMING-6  | Warning  | No common primary clock between related clocks       | 6          |
 | TIMING-7  | Warning  | No common node between related clocks                | 6          |
 | TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
-| TIMING-16 | Warning  | Large setup violation                                | 30         |
+| TIMING-16 | Warning  | Large setup violation                                | 26         |
 | TIMING-18 | Warning  | Missing input or output delay                        | 15         |
 | TIMING-28 | Warning  | Auto-derived clock referenced by a timing constraint | 5          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects          | 1          |
@@ -38,6 +39,16 @@ Table of Contents
 
 2. REPORT DETAILS
 -----------------
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell fifo_generator_v11_0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg in site SLICE_X17Y130 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell fifo_generator_v11_0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1 is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDPE cell fifo_generator_v11_0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg in site SLICE_X18Y134 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell fifo_generator_v11_0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1 is not placed in the same (SLICE) site.
+Related violations: <none>
+
 TIMING-6#1 Warning
 No common primary clock between related clocks  
 The clocks GMII_RX_CLK and CLK_125M are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks GMII_RX_CLK] -to [get_clocks CLK_125M]
@@ -105,152 +116,132 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.027 ns between SiTCP/SiTCP/SiTCP_INT/SiTCP_INT_REG/regX18Data_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_RXCNT/muxMyIp_0/D (clocked by GMII_RX_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.483 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_4/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_4/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.032 ns between SiTCP/SiTCP/SiTCP_INT/SiTCP_INT_REG/regX1AData_5/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_RXCNT/muxMyIp_5/D (clocked by GMII_RX_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.646 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_9/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_9/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.062 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/memRdReq_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/irMemRdReq_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.755 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/memRdReq_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/irMemRdReq_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.118 ns between SiTCP/SiTCP/SiTCP_INT/SiTCP_INT_REG/regX19Data_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_RXCNT/muxMyIp_1/D (clocked by GMII_RX_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.807 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_4/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_4/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.119 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_7/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_7/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.815 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_3/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_3/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.138 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_3/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_3/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.961 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_1/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.196 ns between SiTCP/SiTCP/SiTCP_INT/SiTCP_INT_REG/regX19Data_7/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_RXCNT/muxMyIp_7/D (clocked by GMII_RX_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.973 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_9/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_9/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -1.226 ns between SiTCP/SiTCP/SiTCP_INT/SiTCP_INT_REG/regX1AData_4/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_RXCNT/muxMyIp_4/D (clocked by GMII_RX_CLK). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.012 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_6/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_6/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -1.532 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_1/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.035 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_1/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -1.619 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_6/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_6/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.052 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_10/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_10/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -1.660 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_5/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_5/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.071 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_5/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_5/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.747 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_10/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_10/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.089 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_2/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_2/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.779 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_2/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_2/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.094 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_6/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_6/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -1.907 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_4/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_4/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.102 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_8/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_8/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -1.920 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_4/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_4/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.171 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_7/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_7/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -2.065 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_8/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_8/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.227 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -2.128 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_6/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_6/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.228 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -2.194 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_2/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_2/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.329 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_3/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_3/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -2.204 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_7/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_7/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.369 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_10/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_10/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -2.294 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_9/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_9/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.436 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_7/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_7/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -2.368 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_10/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_10/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.467 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_8/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_8/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -2.424 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_8/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_8/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.469 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_5/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_5/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -2.457 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_1/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_1/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.594 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_2/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_2/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -2.496 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank1LastWrAddr_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank1LastWrAddr_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.520 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/muxEndTgl/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpMuxTrnsEnd_0/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -2.525 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_5/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_5/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.523 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/orRdAct_1/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/irRdAct_1/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -2.640 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_3/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_3/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#27 Warning
-Large setup violation  
-There is a large setup violation of -2.711 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/dlyBank0LastWrAddr_0/C (clocked by SYSCLK_200MP_IN) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpBank0LastWrAddr_0/D (clocked by CLK_125M). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#28 Warning
-Large setup violation  
-There is a large setup violation of -3.531 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/orRdAct_1/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/irRdAct_1/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#29 Warning
-Large setup violation  
-There is a large setup violation of -3.572 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/muxEndTgl/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/rsmpMuxTrnsEnd_0/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#30 Warning
-Large setup violation  
-There is a large setup violation of -3.601 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/orRdAct_0/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/irRdAct_0/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -3.545 ns between SiTCP/SiTCP/GMII/GMII_TXBUF/orRdAct_0/C (clocked by CLK_125M) and SiTCP/SiTCP/GMII/GMII_TXBUF/irRdAct_0/D (clocked by SYSCLK_200MP_IN). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
