@@ -250,7 +250,7 @@ module
 		// FIFO I/F
 		.TCP_RX_WC	({4'b1111,FIFO_DATA_COUNT[11:0]}),					// in	: Rx FIFO write count[15:0] (Unused bits should be set 1)
 		.TCP_RX_WR	(TCP_RX_WR),				// out	: Write enable
-		.TCP_RX_DATA	(TCP_RX_DATA[7:0]),			// out	: Write data[7:0]
+		.TCP_RX_DATA	(TCP_RX_DATA[7:0]),			// out	: Write data[7:0]	
 		.TCP_TX_FULL	(TCP_TX_FULL),				// out	: Almost full flag
 		.TCP_TX_WR	(FIFO_RD_VALID),			// in	: Write enable
 		.TCP_TX_DATA	(TCP_TX_DATA[7:0]),			// in	: Write data[7:0]
@@ -270,31 +270,34 @@ module
         .led           (led[7:0]      ),
         .data_in         (data_out[7:0])
     );
+    
+    
 //Transport
     Transport Transport0(
-      .clk          (CLK_200M     ),
+      .clk          (CLK_125M     ),
       .rst          (~TCP_OPEN_ACK),
-      .bt           (bt[3:0]      ),
       .data         (data_out[7:0])
     );
-   // assign TCP_TX_DATA[7:0]=data_out[7:0];
-
-//FIFO
+  
+  
+  
 	fifo_generator_v11_0 fifo_generator_v11_0(
 	  .clk			(CLK_200M				),//in	:
 	  .rst			(~TCP_OPEN_ACK			),//in	:
-	  //.din			(8'b00111111	),//in	:
-	  .din			(TCP_RX_DATA[7:0]		),//in	:
-	  .wr_en		(TCP_RX_WR				),//in	:
-	// .wr_en		(1'b1				),//in	:
+	  .din			(data_out[7:0]	        ),//in	:
+	// .din			(TCP_RX_DATA[7:0]		),//in	:
+	  //.wr_en		(TCP_RX_WR				),//in	:
+	  .wr_en		(1'b1			        ),//in	:
 	  .full			(						),//out	:
 	  .dout			(TCP_TX_DATA[7:0]		),//out	:
 	  .valid		(FIFO_RD_VALID			),//out	:active hi
 	  .rd_en		(~TCP_TX_FULL			),//in	:
-	 // .rd_en		(1'b1		),//in	:
+	  //.rd_en		(1'b1	               	),//in	:
 	  .empty		(						),//out	:
 	  .data_count	(FIFO_DATA_COUNT[11:0]	)//out	:[11:0]
 	);
+	
+	
 
 //RBCP_test
 	always@(posedge CLK_200M)begin

@@ -13,12 +13,11 @@ Command: synth_design -top kc705sitcp -part xc7k325tffg900-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t-ffg900'
-INFO: [Common 17-1223] The version limit for your license is '2017.11' and will expire in -390 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2017.11' and will expire in -405 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12322 
-WARNING: [Synth 8-2292] literal value truncated to fit in 8 bits [/home/users/kakizaki/graduate_report/design_code/src/Transport.v:12]
+INFO: Helper process launched with PID 8476 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1286.816 ; gain = 84.250 ; free physical = 742 ; free virtual = 6058
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1277.574 ; gain = 75.000 ; free physical = 1509 ; free virtual = 6064
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'kc705sitcp' [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:20]
 INFO: [Synth 8-638] synthesizing module 'IBUFDS' [/home/cad/xilinx-vivado-2017.2/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14485]
@@ -238,8 +237,12 @@ INFO: [Synth 8-638] synthesizing module 'fifo_generator_v11_0' [/home/users/kaki
 INFO: [Synth 8-256] done synthesizing module 'fifo_generator_v11_0' (20#1) [/home/users/kakizaki/graduate_report/design_code/src/fifo_generator_v11_0.v:39]
 INFO: [Synth 8-256] done synthesizing module 'kc705sitcp' (21#1) [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:20]
 WARNING: [Synth 8-3331] design kc705sitcp has unconnected port GPIO_SWITCH_0
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[3]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[2]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[1]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1321.066 ; gain = 118.500 ; free physical = 746 ; free virtual = 6063
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1321.074 ; gain = 118.500 ; free physical = 1512 ; free virtual = 6070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -249,7 +252,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1321.066 ; gain = 118.500 ; free physical = 746 ; free virtual = 6064
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1321.074 ; gain = 118.500 ; free physical = 1513 ; free virtual = 6070
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -288,22 +291,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   PLLE2_BASE => PLLE2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1684.855 ; gain = 0.000 ; free physical = 342 ; free virtual = 5694
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1684.934 ; gain = 0.000 ; free physical = 1181 ; free virtual = 5738
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.855 ; gain = 483.289 ; free physical = 517 ; free virtual = 5868
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.934 ; gain = 483.359 ; free physical = 1302 ; free virtual = 5871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.855 ; gain = 483.289 ; free physical = 517 ; free virtual = 5868
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.934 ; gain = 483.359 ; free physical = 1302 ; free virtual = 5871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.855 ; gain = 483.289 ; free physical = 515 ; free virtual = 5867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.934 ; gain = 483.359 ; free physical = 1302 ; free virtual = 5870
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element CNT_1US_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/IIC_CORE.v:77]
 WARNING: [Synth 8-6014] Unused sequential element INI_CNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/PCA9548_SW.v:91]
@@ -312,12 +315,11 @@ WARNING: [Synth 8-6014] Unused sequential element WBK_ADR_reg was removed.  [/ho
 WARNING: [Synth 8-6014] Unused sequential element EROM_IAD_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/AT93C46_IIC.v:187]
 WARNING: [Synth 8-6014] Unused sequential element CMD_CNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/AT93C46_IIC.v:271]
 WARNING: [Synth 8-6014] Unused sequential element DAT_CNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/AT93C46_IIC.v:272]
-INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element INICNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:118]
 WARNING: [Synth 8-6014] Unused sequential element CNT_CLK_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:176]
 WARNING: [Synth 8-6014] Unused sequential element RX_CNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:190]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1685.855 ; gain = 483.289 ; free physical = 508 ; free virtual = 5859
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.934 ; gain = 483.359 ; free physical = 1294 ; free virtual = 5863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -334,7 +336,7 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 	   2 Input      9 Bit       Adders := 3     
 	   3 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
 	   2 Input      7 Bit       Adders := 4     
 	   2 Input      4 Bit       Adders := 3     
 	   2 Input      3 Bit       Adders := 1     
@@ -354,9 +356,8 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 10    
-	   2 Input      8 Bit        Muxes := 20    
+	   2 Input      8 Bit        Muxes := 21    
 	   2 Input      7 Bit        Muxes := 10    
-	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 5     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
@@ -470,10 +471,12 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 1     
 Module Transport 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -508,6 +511,10 @@ WARNING: [Synth 8-6014] Unused sequential element INICNT_reg was removed.  [/hom
 WARNING: [Synth 8-6014] Unused sequential element CNT_CLK_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:176]
 WARNING: [Synth 8-6014] Unused sequential element RX_CNT_reg was removed.  [/home/users/kakizaki/graduate_report/design_code/src/kc705sitcp.v:190]
 WARNING: [Synth 8-3331] design kc705sitcp has unconnected port GPIO_SWITCH_0
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[3]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[2]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[1]
+WARNING: [Synth 8-3331] design kc705sitcp has unconnected port bt[0]
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[0]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[1]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[2]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
@@ -515,18 +522,9 @@ INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[3]' (FDCE) to 'A
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[4]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[5]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/EROM_NUM_reg[6]' (FDCE) to 'AT93C46_IIC/EROM_RNW_reg'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Transport0/data_reg[0] )
-INFO: [Synth 8-3886] merging instance 'Transport0/data_reg[1]' (FDC) to 'Transport0/data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'Transport0/data_reg[2]' (FDC) to 'Transport0/data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'Transport0/data_reg[3]' (FDC) to 'led0/led_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Transport0/data_reg[6] )
-INFO: [Synth 8-3886] merging instance 'led0/led_reg[1]' (FDC) to 'led0/led_reg[2]'
-INFO: [Synth 8-3886] merging instance 'led0/led_reg[2]' (FDC) to 'led0/led_reg[4]'
-INFO: [Synth 8-3886] merging instance 'led0/led_reg[6]' (FDC) to 'Transport0/data_reg[6]'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_DAD_reg[0]' (FDE) to 'AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_DAD_reg[1]'
 INFO: [Synth 8-3886] merging instance 'AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_DAD_reg[1]' (FDE) to 'AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_DAD_reg[3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_DAD_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Transport0/data_reg[6] )
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC_NUM_reg[7]) is unused and will be removed from module kc705sitcp.
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC_CTL/CORE_NUM_reg[7]) is unused and will be removed from module kc705sitcp.
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC_CTL/IIC_CORE/IIC_EOR_OUT_reg) is unused and will be removed from module kc705sitcp.
@@ -542,10 +540,8 @@ WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC1_BSY_OUT_
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC1_RAK_OUT_reg) is unused and will be removed from module kc705sitcp.
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/PCA9548_SW/IIC1_ERR_OUT_reg) is unused and will be removed from module kc705sitcp.
 WARNING: [Synth 8-3332] Sequential element (AT93C46_IIC/MEM_ADR_reg[7]) is unused and will be removed from module kc705sitcp.
-WARNING: [Synth 8-3332] Sequential element (Transport0/data_reg[0]) is unused and will be removed from module kc705sitcp.
-WARNING: [Synth 8-3332] Sequential element (Transport0/data_reg[6]) is unused and will be removed from module kc705sitcp.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 494 ; free virtual = 5845
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1279 ; free virtual = 5847
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -557,13 +553,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 361 ; free virtual = 5720
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1153 ; free virtual = 5723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 360 ; free virtual = 5718
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1152 ; free virtual = 5722
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -575,7 +571,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 359 ; free virtual = 5717
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -599,7 +595,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -612,7 +608,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -624,25 +620,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -680,22 +676,22 @@ Report Cell Usage:
 |3     |BUFG                    |     2|
 |4     |BUFGMUX                 |     1|
 |5     |CARRY4                  |    16|
-|6     |LUT1                    |    43|
-|7     |LUT2                    |    69|
-|8     |LUT3                    |    60|
-|9     |LUT4                    |    56|
-|10    |LUT5                    |   102|
-|11    |LUT6                    |    61|
+|6     |LUT1                    |    44|
+|7     |LUT2                    |    71|
+|8     |LUT3                    |    61|
+|9     |LUT4                    |    57|
+|10    |LUT5                    |   103|
+|11    |LUT6                    |    65|
 |12    |ODDR                    |     1|
 |13    |PLLE2_BASE              |     1|
 |14    |PULLUP                  |     1|
 |15    |RAMB18E1                |     1|
 |16    |SRL16E                  |     2|
 |17    |FD                      |     3|
-|18    |FDCE                    |   299|
-|19    |FDPE                    |    28|
+|18    |FDCE                    |   309|
+|19    |FDPE                    |    26|
 |20    |FDRE                    |    99|
-|21    |IBUF                    |    19|
+|21    |IBUF                    |    15|
 |22    |IBUFDS                  |     1|
 |23    |IOBUF                   |     2|
 |24    |OBUF                    |    22|
@@ -705,7 +701,7 @@ Report Instance Areas:
 +------+-----------------+-------------------------+------+
 |      |Instance         |Module                   |Cells |
 +------+-----------------+-------------------------+------+
-|1     |top              |                         |  1260|
+|1     |top              |                         |  1274|
 |2     |  AT93C46_IIC    |AT93C46_IIC              |   532|
 |3     |    MIRROR_MEM   |BRAM128_9B9B             |     3|
 |4     |    PCA9548_SW   |PCA9548_SW               |   304|
@@ -713,15 +709,15 @@ Report Instance Areas:
 |6     |        IIC_CORE |IIC_CORE                 |   138|
 |7     |  SiTCP          |WRAP_SiTCP_GMII_XC7K_32K |   497|
 |8     |    TIMER        |TIMER                    |    89|
-|9     |  Transport0     |Transport                |     4|
-|10    |  led0           |Led                      |     5|
+|9     |  Transport0     |Transport                |    19|
+|10    |  led0           |Led                      |     8|
 +------+-----------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 358 ; free virtual = 5716
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1150 ; free virtual = 5721
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1686.855 ; gain = 120.500 ; free physical = 414 ; free virtual = 5772
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1686.855 ; gain = 484.289 ; free physical = 416 ; free virtual = 5774
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1686.934 ; gain = 120.500 ; free physical = 1206 ; free virtual = 5777
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1686.934 ; gain = 484.359 ; free physical = 1209 ; free virtual = 5779
 INFO: [Project 1-571] Translating synthesized netlist
 Release 14.7 - ngc2edif P_INT.20170511 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -740,7 +736,7 @@ WARNING:NetListWriters:306 - Signal bus
    missing bus signals.
   finished :Prep
 Writing EDIF netlist file fifo_generator_v11_0.edif ...
-ngc2edif: Total memory usage is 103668 kilobytes
+ngc2edif: Total memory usage is 103676 kilobytes
 
 Reading core file '/home/users/kakizaki/graduate_report/design_code/ngc/fifo_generator_v11_0.ngc' for (cell view 'fifo_generator_v11_0', library 'work')
 Parsing EDIF File [./.ngc2edfcache/fifo_generator_v11_0_ngc_3847395f.edif]
@@ -822,12 +818,12 @@ WARNING:NetListWriters:306 - Signal bus SiTCP_INT/SiTCP_INT_REG/muxData[31 : 0]
    missing bus signals.
   finished :Prep
 Writing EDIF netlist file SiTCP_XC7K_32K_BBT_V110.edif ...
-ngc2edif: Total memory usage is 122628 kilobytes
+ngc2edif: Total memory usage is 122624 kilobytes
 
 Reading core file '/home/users/kakizaki/graduate_report/design_code/ngc/SiTCP_XC7K_32K_BBT_V110.ngc' for (cell view 'SiTCP_XC7K_32K_BBT_V110', library 'work')
 Parsing EDIF File [./.ngc2edfcache/SiTCP_XC7K_32K_BBT_V110_ngc_3847395f.edif]
 Finished Parsing EDIF File [./.ngc2edfcache/SiTCP_XC7K_32K_BBT_V110_ngc_3847395f.edif]
-INFO: [Netlist 29-17] Analyzing 5572 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 5568 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-43] Netlist 'kc705sitcp' is not ideal for floorplanning, since the cellview 'SiTCP_XC7K_32K_BBT_V110' defined in file 'SiTCP_XC7K_32K_BBT_V110.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-479] Netlist was created with Xilinx ngc2edif P_INT.20170511
@@ -848,9 +844,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   PLLE2_BASE => PLLE2_ADV: 1 instances
   RAM32X1S => RAM32X1S (RAMS32): 8 instances
 
-79 Infos, 63 Warnings, 3 Critical Warnings and 0 Errors encountered.
+69 Infos, 68 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1696.855 ; gain = 517.930 ; free physical = 329 ; free virtual = 5730
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1697.934 ; gain = 519.000 ; free physical = 1131 ; free virtual = 5733
 INFO: [Common 17-1381] The checkpoint '/home/users/kakizaki/graduate_report/design_code/vivado/project_1/project_1.runs/synth_1/kc705sitcp.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1721.867 ; gain = 0.000 ; free physical = 329 ; free virtual = 5731
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 25 12:08:10 2018...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.15 . Memory (MB): peak = 1722.945 ; gain = 0.000 ; free physical = 1130 ; free virtual = 5734
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  9 12:42:21 2019...

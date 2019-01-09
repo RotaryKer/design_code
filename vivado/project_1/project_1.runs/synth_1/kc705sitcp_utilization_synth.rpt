@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Tue Dec 25 12:08:09 2018
+| Date         : Wed Jan  9 12:42:21 2019
 | Host         : hummingbird.cis.nagasaki-u.ac.jp running 64-bit CentOS release 6.9 (Final)
 | Command      : report_utilization -file kc705sitcp_utilization_synth.rpt -pb kc705sitcp_utilization_synth.pb
 | Design       : kc705sitcp
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4063 |     0 |    203800 |  1.99 |
-|   LUT as Logic             | 3982 |     0 |    203800 |  1.95 |
+| Slice LUTs*                | 4073 |     0 |    203800 |  2.00 |
+|   LUT as Logic             | 3992 |     0 |    203800 |  1.96 |
 |   LUT as Memory            |   81 |     0 |     64000 |  0.13 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
 |     LUT as Shift Register  |   73 |     0 |           |       |
-| Slice Registers            | 4738 |     3 |    407600 |  1.16 |
-|   Register as Flip Flop    | 4738 |     3 |    407600 |  1.16 |
+| Slice Registers            | 4746 |     3 |    407600 |  1.16 |
+|   Register as Flip Flop    | 4746 |     3 |    407600 |  1.16 |
 |   Register as Latch        |    0 |     0 |    407600 |  0.00 |
 | F7 Muxes                   |   81 |     0 |    101900 |  0.08 |
 | F8 Muxes                   |   32 |     0 |     50950 |  0.06 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 145   |          Yes |           - |          Set |
-| 1250  |          Yes |           - |        Reset |
+| 143   |          Yes |           - |          Set |
+| 1260  |          Yes |           - |        Reset |
 | 77    |          Yes |         Set |            - |
 | 3266  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -94,7 +94,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   45 |     0 |       500 |  9.00 |
+| Bonded IOB                  |   41 |     0 |       500 |  8.20 |
 | Bonded IPADs                |    0 |     0 |        50 |  0.00 |
 | Bonded OPADs                |    0 |     0 |        32 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
@@ -157,21 +157,21 @@ Table of Contents
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
 | FDRE      | 3266 |        Flop & Latch |
-| FDCE      | 1250 |        Flop & Latch |
-| LUT3      | 1158 |                 LUT |
-| LUT2      |  852 |                 LUT |
-| LUT6      |  753 |                 LUT |
-| LUT1      |  507 |                 LUT |
-| LUT4      |  467 |                 LUT |
-| LUT5      |  389 |                 LUT |
+| FDCE      | 1260 |        Flop & Latch |
+| LUT3      | 1159 |                 LUT |
+| LUT2      |  854 |                 LUT |
+| LUT6      |  757 |                 LUT |
+| LUT1      |  508 |                 LUT |
+| LUT4      |  468 |                 LUT |
+| LUT5      |  390 |                 LUT |
 | CARRY4    |  321 |          CarryLogic |
-| FDPE      |  145 |        Flop & Latch |
+| FDPE      |  143 |        Flop & Latch |
 | MUXF7     |   81 |               MuxFx |
 | FDSE      |   77 |        Flop & Latch |
 | SRLC16E   |   71 |  Distributed Memory |
 | MUXF8     |   32 |               MuxFx |
 | OBUF      |   22 |                  IO |
-| IBUF      |   21 |                  IO |
+| IBUF      |   17 |                  IO |
 | RAMB36E1  |   10 |        Block Memory |
 | RAMS32    |    8 |  Distributed Memory |
 | RAMB18E1  |    6 |        Block Memory |

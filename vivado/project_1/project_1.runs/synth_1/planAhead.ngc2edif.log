@@ -12,7 +12,7 @@ WARNING:NetListWriters:306 - Signal bus
    missing bus signals.
   finished :Prep
 Writing EDIF netlist file fifo_generator_v11_0.edif ...
-ngc2edif: Total memory usage is 103668 kilobytes
+ngc2edif: Total memory usage is 103676 kilobytes
 
 Release 14.7 - ngc2edif P_INT.20170511 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -88,5 +88,5 @@ WARNING:NetListWriters:306 - Signal bus SiTCP_INT/SiTCP_INT_REG/muxData[31 : 0]
    missing bus signals.
   finished :Prep
 Writing EDIF netlist file SiTCP_XC7K_32K_BBT_V110.edif ...
-ngc2edif: Total memory usage is 122628 kilobytes
+ngc2edif: Total memory usage is 122624 kilobytes
 

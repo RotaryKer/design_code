@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date             : Tue Dec 25 12:11:59 2018
+| Date             : Wed Jan  9 12:44:39 2019
 | Host             : hummingbird.cis.nagasaki-u.ac.jp running 64-bit CentOS release 6.9 (Final)
 | Command          : report_power -file kc705sitcp_power_routed.rpt -pb kc705sitcp_power_summary_routed.pb -rpx kc705sitcp_power_routed.rpx
 | Design           : kc705sitcp
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.389 |
-| Dynamic (W)              | 0.226 |
+| Total On-Chip Power (W)  | 0.391 |
+| Dynamic (W)              | 0.228 |
 | Device Static (W)        | 0.162 |
 | Effective TJA (C/W)      | 1.8   |
 | Max Ambient (C)          | 84.3  |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.043 |        7 |       --- |             --- |
-| Slice Logic              |     0.016 |     9237 |       --- |             --- |
-|   LUT as Logic           |     0.012 |     3586 |    203800 |            1.76 |
+| Clocks                   |     0.044 |        7 |       --- |             --- |
+| Slice Logic              |     0.016 |     9243 |       --- |             --- |
+|   LUT as Logic           |     0.012 |     3600 |    203800 |            1.77 |
 |   CARRY4                 |     0.002 |      321 |     50950 |            0.63 |
-|   Register               |     0.002 |     4633 |    407600 |            1.14 |
+|   Register               |     0.002 |     4629 |    407600 |            1.14 |
 |   LUT as Shift Register  |    <0.001 |       51 |     64000 |            0.08 |
 |   F7/F8 Muxes            |    <0.001 |      113 |    203800 |            0.06 |
 |   LUT as Distributed RAM |    <0.001 |        8 |     64000 |            0.01 |
-|   Others                 |     0.000 |      343 |       --- |             --- |
-| Signals                  |     0.020 |     5803 |       --- |             --- |
+|   Others                 |     0.000 |      342 |       --- |             --- |
+| Signals                  |     0.020 |     5797 |       --- |             --- |
 | Block RAM                |     0.018 |       13 |       445 |            2.92 |
 | PLL                      |     0.110 |        1 |        10 |           10.00 |
-| I/O                      |     0.019 |       43 |       500 |            8.60 |
+| I/O                      |     0.019 |       39 |       500 |            7.80 |
 | Static Power             |     0.162 |          |           |                 |
-| Total                    |     0.389 |          |           |                 |
+| Total                    |     0.391 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.179 |       0.109 |      0.070 |
+| Vccint    |       1.000 |     0.180 |       0.111 |      0.070 |
 | Vccaux    |       1.800 |     0.086 |       0.057 |      0.028 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.006 |       0.005 |      0.001 |
@@ -147,7 +147,7 @@ Table of Contents
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                                                                  | Power (W) |
 +---------------------------------------------------------------------------------------------------------------------------------------+-----------+
-| kc705sitcp                                                                                                                            |     0.226 |
+| kc705sitcp                                                                                                                            |     0.228 |
 |   AT93C46_IIC                                                                                                                         |     0.006 |
 |     MIRROR_MEM                                                                                                                        |     0.002 |
 |     PCA9548_SW                                                                                                                        |     0.002 |
@@ -155,8 +155,8 @@ Table of Contents
 |         IIC_CORE                                                                                                                      |     0.002 |
 |           IIC_SDA_OB                                                                                                                  |     0.000 |
 |   GMII_MDIO_IOBUF_inst                                                                                                                |    <0.001 |
-|   SiTCP                                                                                                                               |     0.087 |
-|     SiTCP                                                                                                                             |     0.086 |
+|   SiTCP                                                                                                                               |     0.088 |
+|     SiTCP                                                                                                                             |     0.087 |
 |       SiTCP/TCP/TCP_MNGR/prmtrMem/Mram_RAM1                                                                                           |    <0.001 |
 |       SiTCP/TCP/TCP_MNGR/prmtrMem/Mram_RAM2                                                                                           |    <0.001 |
 |       SiTCP/TCP/TCP_MNGR/prmtrMem/Mram_RAM3                                                                                           |    <0.001 |
